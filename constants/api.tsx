@@ -1,0 +1,16 @@
+export const OPPERANDS = {
+  BEGINS: "begins",
+  BETWEEN: "between",
+  CONTAINS: "contains",
+  ENDS: "ends",
+  EQUALS: "equals",
+  GREATER: "greater",
+  GREATER_OR_EQUAL: "greater_or_equal",
+  IN: "in",
+  LESS: "less",
+  LESS_OR_EQUAL: "less_or_equal",
+  NOT_BEGINS: "notbegins",
+  NOT_CONTAINS: "notcontains",
+  NOT_EQUALS: "notequals",
+  NOT_IN: "notin",
+};

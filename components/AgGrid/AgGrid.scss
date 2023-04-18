@@ -1,0 +1,78 @@
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin";
+
+.ag-theme-alpine {
+  @include ag-theme-alpine(
+    (
+      alpine-active-color: var(--color-primary),
+      foreground-color: var(--color-dark),
+      background-color: var(--color-light),
+      border-color: #dde2eb,
+      grid-size: 5px,
+      header-background-color: #f8f9fa,
+      header-height: 40px,
+    )
+  );
+
+  .ag-overlay-loading-wrapper {
+    background-color: #fff;
+  }
+}
+
+.ag-row {
+  border: none;
+}
+
+.ag-react-container {
+  height: 100%;
+}
+
+.ag-overlay-no-rows-wrapper {
+  font-size: 14px;
+}
+
+.ag-overlay-no-rows-wrapper.ag-layout-auto-height {
+  padding-top: 55px !important;
+}
+
+.ag-grid-cell-centered .ag-header-cell-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ag-grid-invalid-price {
+  background-color: rgba(255, 0, 0, 0.15) !important;
+}
+
+.ag-grid-pinned-bottom-row {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.ag-grid-selectable-not-compatible {
+  pointer-events: none !important;
+  background-color: rgba(255, 0, 0, 0.2) !important;
+}
+.ag-grid-selectable {
+  background-color: rgba(0, 255, 0, 0.2) !important;
+}
+
+.ag-grid-hide-cell-value {
+  visibility: hidden !important;
+}
+
+.ag-grid-inline-editable {
+  border-radius: 4px;
+  // border: 1px solid $green-200 !important;
+}
+.ag-grid-inline-editable__editing {
+  border-color: #ffff00;
+}
+
+.ag-grid-updated-values-cell {
+  // color: rgba(var(--bs-success-rgb), 1);
+}
+
+.ag-grid-updated-values-invalid-cell {
+  // color: rgba(var(--bs-danger-rgb), 1);
+}

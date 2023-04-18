@@ -1,0 +1,19 @@
+.floatingLabel {
+  // fill space when floating label is wrapped in <InputGroup />
+  flex: 1;
+}
+.rightPadding {
+  padding-right: 0px !important;
+}
+.leftPadding {
+  padding-left: 0px !important;
+}
+.openModal {
+  position: relative;
+  top: 2.45rem;
+}
+.offcanvas {
+  background-color: $gray-100;
+  width: 650px;
+  z-index: 1080;
+}

@@ -1,0 +1,123 @@
+{
+  "plugins": ["@typescript-eslint", "eslint-comments", "jest"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:eslint-comments/recommended",
+    "plugin:jest/recommended",
+    "prettier"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    // Dev disabled eslint
+    "no-plusplus": "off",
+    "react/jsx-fragments": "off",
+
+    // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
+    "no-prototype-builtins": "off",
+    // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
+    "import/prefer-default-export": "off",
+    // "import/no-default-export": "error",
+    // Too restrictive: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+    "react/destructuring-assignment": "off",
+    // No jsx extension: https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904
+    "react/jsx-filename-extension": "off",
+    // Use function hoisting to improve code readability
+    // "no-use-before-define": [
+    //   "error",
+    //   { "functions": false, "classes": true, "variables": true }
+    // ],
+    // Allow most functions to rely on type inference. If the function is exported, then `@typescript-eslint/explicit-module-boundary-types` will ensure it's typed.
+    // "@typescript-eslint/no-use-before-define": [
+    //   "error",
+    //   {
+    //     "functions": false,
+    //     "classes": true,
+    //     "variables": true,
+    //     "typedefs": true
+    //   }
+    // ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+
+    // It's not accurate in the monorepo style
+    "import/no-extraneous-dependencies": "off",
+
+    /**
+        CUSTOM RULES (our own overrides)
+    */
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off",
+
+    // don't require any import order
+    "import/order": "off",
+    "import/export": "off",
+    "import/no-default-export": "off",
+
+    "react/jsx-props-no-spreading": "off",
+
+    // TODO.babyjay: turn these back on eventually
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "no-nested-ternary": "off",
+    "import/no-cycle": "off",
+
+    // TODO.babyjay: from ag-grid components (should also be turned back on once the file has been formatted)
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-use-before-define": "off",
+    "react/require-default-props": "off",
+    "react/forbid-prop-types": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/restrict-plus-operands": "off",
+    "no-extra-boolean-cast": "off",
+    "consistent-return": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "no-restricted-syntax": "off",
+    "no-console": "off",
+    "no-return-assign": "off",
+    "react/default-props-match-prop-types": "off",
+    "react/jsx-no-duplicate-props": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "prefer-object-spread": "off",
+    "no-param-reassign": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/await-thenable": "off",
+    "import/extensions": "off",
+
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/require-await": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "arrow-body-style": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    // "react/jsx-curly-brace-presence": "off",
+
+    "@next/next/no-img-element": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        // Allow `require()`
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+  {{camelCasePlural entityName}},
